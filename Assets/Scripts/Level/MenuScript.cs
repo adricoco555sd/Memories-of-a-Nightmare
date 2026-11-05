@@ -4,8 +4,13 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public GameObject canvasObject;
+    
     public void onMenuButtonClicked() {
         SceneManager.LoadSceneAsync("MainMenu");
+    }
+
+    public void onGameOverButtonClicked() {
+        SceneManager.LoadSceneAsync("GameOver");
     }
     
     public void onQuitButtonClicked() {
