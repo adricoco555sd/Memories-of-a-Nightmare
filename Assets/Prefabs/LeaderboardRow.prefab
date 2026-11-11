@@ -138,11 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3004572448223328267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 4d0e21b2250f14c47934b15020c77544, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: ee8611f024e3bc2438ea02415dd67f1e, type: 3}
->>>>>>> b089e2be8eefde8088cba292cbec003b3ffa5022
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CEVideojocs.Bloc2.LeaderboardRowUI
   _positionText: {fileID: 4638814161387436099}
