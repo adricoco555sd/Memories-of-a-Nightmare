@@ -1,22 +1,27 @@
-using System;
+using CEVideojocs.Bloc2;
 using UnityEngine;
 
-
-
+// Versió adaptada: si el jugador ja s'ha identificat (per exemple en tornar des de GameOver),
+// salta el login i va directament al menú principal.
 public class OnStart : MonoBehaviour
 {
     [SerializeField] public GameObject mainMenu;
     [SerializeField] public GameObject logIn;
 
-    private void Start()
-    {
-        mainMenu.SetActive(false);
-        logIn.SetActive(true);
-    }
-
     private void Awake()
     {
-        mainMenu.SetActive(false);
-        logIn.SetActive(true);
+        Apply();
+    }
+
+    private void Start()
+    {
+        Apply();
+    }
+
+    private void Apply()
+    {
+        bool loggedIn = PlayerData.Current != null;
+        mainMenu.SetActive(loggedIn);
+        logIn.SetActive(!loggedIn);
     }
 }

@@ -8,6 +8,11 @@ using UnityEngine.Networking;
 
 namespace CEVideojocs.Bloc2
 {
+    /// <summary>
+    /// Servei de xarxa modular. Tota la URL surt de NetworkConfig.BaseUrl.
+    /// Es crea sol la primera vegada que s'usa i sobreviu als canvis d'escena,
+    /// així no cal posar-lo a cap escena (MainMenu i GameOver el poden fer servir igual).
+    /// </summary>
     public class APIService : MonoBehaviour
     {
         private static APIService _instance;
@@ -21,7 +26,8 @@ namespace CEVideojocs.Bloc2
                     GameObject go = new GameObject("APIService");
                     _instance = go.AddComponent<APIService>();
                     DontDestroyOnLoad(go);
-                    
+
+                    // Força la càrrega de l'asset perquè NetworkConfig.BaseUrl quedi assignada (també en build).
                     if (string.IsNullOrEmpty(NetworkConfig.BaseUrl))
                     {
                         Resources.Load<NetworkConfig>("NetworkConfig");
