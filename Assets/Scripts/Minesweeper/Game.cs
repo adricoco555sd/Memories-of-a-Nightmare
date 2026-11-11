@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using CEVideojocs.Bloc2;
 
 [DefaultExecutionOrder(-1)]
 public class Game : MonoBehaviour
@@ -268,6 +269,7 @@ public class Game : MonoBehaviour
 
         win = true;
         score += 10;
+        PlayerData.AddScore(10); 
         Debug.Log(score);
         
         // Flag all the mines
