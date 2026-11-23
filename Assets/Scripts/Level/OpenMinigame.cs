@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +5,8 @@ public class OpenMinigame : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        SceneManager.LoadSceneAsync("Minesweeper");
+        string scene = MinigameSelection.MinigameSelection.SceneName(MinigameSelection.MinigameSelection.Selected);
+        if (scene != null)
+            SceneManager.LoadScene(scene);
     }
 }

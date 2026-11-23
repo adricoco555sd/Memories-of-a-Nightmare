@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitMinigame : MonoBehaviour
+public class ExitMinigameMS : MonoBehaviour
 {
     // Update is called once per frame
     void Update()

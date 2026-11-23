@@ -22,7 +22,7 @@ public class GameOverAction : MonoBehaviour
 
     private void Awake()
     {
-        _menuButton.onClick.AddListener(OnMenuClicked);
+        _menuButton.onClick.AddListener(onMenuClicked);
     }
 
     private void Start()
@@ -73,8 +73,7 @@ public class GameOverAction : MonoBehaviour
         }
     }
     
-    private void OnMenuClicked()
-    {
+    public void onMenuClicked() {
         PlayerData.ResetScore();
         SceneManager.LoadSceneAsync("MainMenu");
     }

@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIActions : MonoBehaviour
+namespace MainMenu
 {
-    public void onPlayButtonClicked() {
-        SceneManager.LoadSceneAsync("Level");
+    public class UIActions : MonoBehaviour
+    {
+        public void onPlayButtonClicked() {
+            SceneManager.LoadSceneAsync("MinigameSelection");
+        }
     }
 }
