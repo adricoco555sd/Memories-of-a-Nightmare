@@ -75,6 +75,7 @@ public class GameOverAction : MonoBehaviour
     
     public void onMenuClicked() {
         PlayerData.ResetScore();
+        PlayerData.Current = null;
         SceneManager.LoadSceneAsync("MainMenu");
     }
 

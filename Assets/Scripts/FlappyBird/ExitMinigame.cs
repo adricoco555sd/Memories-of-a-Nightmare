@@ -7,6 +7,7 @@ public class ExitMinigameFB : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Time.timeScale = 1f;
             SceneManager.LoadSceneAsync("Level");
         }
     }
