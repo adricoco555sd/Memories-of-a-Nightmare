@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     {
         spriteIndex++;
 
-        if (spriteIndex >= sprites.Length) {
+        if (spriteIndex >= sprites.Length - 1) {
             spriteIndex = 0;
         }
 
